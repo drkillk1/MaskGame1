@@ -5,7 +5,9 @@ public class PlayerController2D : MonoBehaviour
     [Header("References")]
     public Rigidbody2D rb;
     public Transform groundCheck;
-    public Transform wallCheck;
+    public Transform wallCheckRight;
+    public Transform wallCheckLeft;
+
     public LayerMask groundLayer;
 
     [Header("Move")]
@@ -65,7 +67,14 @@ public class PlayerController2D : MonoBehaviour
     float _wallJumpLockCounter;
 
     bool IsGrounded => _col != null && _col.IsTouchingLayers(groundLayer);
-    bool IsWalled => Physics2D.OverlapBox(wallCheck.position, wallCheckSize, 0f, groundLayer);
+    bool IsWalledRight => Physics2D.OverlapBox(wallCheckRight.position, wallCheckSize, 0f, groundLayer);
+    bool IsWalledLeft  => Physics2D.OverlapBox(wallCheckLeft.position,  wallCheckSize, 0f, groundLayer);
+
+    bool IsWalled => IsWalledLeft || IsWalledRight;
+
+    int _wallSide; // -1 = left, +1 = right, 0 = none
+
+
 
     void Reset()
     {
@@ -146,17 +155,21 @@ public class PlayerController2D : MonoBehaviour
         // Wall jump
         if (enableWallJump && !maskDisableWallJump)
         {
-            bool canWallJump = _jumpPressed && !_isWallSliding == false; // if wall sliding
+            bool canWallJump = _jumpPressed && _isWallSliding && _wallSide != 0;
             if (canWallJump)
             {
-                Vector2 dir = _isFacingRight ? Vector2.left : Vector2.right;
-                rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y); // optional cleanup
-                rb.AddForce(new Vector2(dir.x * wallJumpForce.x, wallJumpForce.y), ForceMode2D.Impulse);
+                // If touching left wall (-1), push right (+1). If right wall (+1), push left (-1).
+                float pushXDir = -_wallSide;
+
+                rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+                rb.AddForce(new Vector2(pushXDir * wallJumpForce.x, wallJumpForce.y), ForceMode2D.Impulse);
 
                 _wallJumpLockCounter = wallJumpLockTime;
                 _wallJumping = true;
+                _jumpBufferCounter = 0f; // optional: clear buffer
             }
         }
+
 
         // Variable jump height: if you release jump early while rising, cut velocity
         if (!_jumpHeld && rb.linearVelocity.y > 0.01f)
@@ -195,12 +208,15 @@ public class PlayerController2D : MonoBehaviour
 
     void HandleWall()
     {
-        if (!enableWallSlide) { _isWallSliding = false; return; }
+        if (!enableWallSlide) { _isWallSliding = false; _wallSide = 0; return; }
 
-        bool touchingWall = IsWalled;
         bool notGrounded = !IsGrounded;
+        bool left = IsWalledLeft;
+        bool right = IsWalledRight;
 
-        _isWallSliding = touchingWall && notGrounded && Mathf.Abs(_xInput) > 0.01f && !_wallJumping;
+        _wallSide = left ? -1 : (right ? +1 : 0);
+
+        _isWallSliding = (_wallSide != 0) && notGrounded && !_wallJumping;
 
         if (_isWallSliding)
         {
@@ -248,10 +264,15 @@ public class PlayerController2D : MonoBehaviour
             Gizmos.color = Color.green;
             Gizmos.DrawWireCube(groundCheck.position, groundCheckSize);
         }
-        if (wallCheck)
+        if (wallCheckRight)
         {
             Gizmos.color = Color.cyan;
-            Gizmos.DrawWireCube(wallCheck.position, wallCheckSize);
+            Gizmos.DrawWireCube(wallCheckRight.position, wallCheckSize);
+        }
+        if (wallCheckLeft)
+        {
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawWireCube(wallCheckLeft.position, wallCheckSize);
         }
     }
 }
