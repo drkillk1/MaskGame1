@@ -19,5 +19,5 @@ MonoBehaviour:
   gravityMultiplier: 1
   moveSpeedMultiplier: 1
   enableLongJump: 1
-  longJumpMultiplier: 1.8
+  longJumpMultiplier: 10
   longJumpHoldTime: 0.25

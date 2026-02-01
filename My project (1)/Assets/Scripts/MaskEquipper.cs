@@ -6,6 +6,10 @@ public class MaskEquipper : MonoBehaviour
     public PlayerController controller;            // drag your PlayerController here
     public SpriteRenderer maskSpriteRenderer;      // drag the MaskVisual SpriteRenderer here
 
+    public SpriteRenderer playerRenderer;
+
+    public GameObject player;
+
     [Header("Default state")]
     public Sprite defaultMaskSprite;               // optional (none equipped)
 
@@ -30,6 +34,8 @@ public class MaskEquipper : MonoBehaviour
             var chosen = spriteOverride != null ? spriteOverride : null;
             maskSpriteRenderer.sprite = chosen;
             maskSpriteRenderer.enabled = (maskSpriteRenderer.sprite != null);
+            playerRenderer.sprite = null;
+            //player.transform.localScale = new Vector3(4.7f, 4.7f, 4.7f);
         }
     }
 
@@ -39,6 +45,7 @@ public class MaskEquipper : MonoBehaviour
         {
             // If you want "None", you can add a none mask and equip it instead.
             controller.currentMask = null;
+            //player.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         }
 
         if (maskSpriteRenderer != null)
