@@ -913,8 +913,11 @@ Tilemap:
     e32: 0
     e33: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &566522318
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!19719996 &204918197
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -954,6 +957,9 @@ TilemapCollider2D:
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
 --- !u!1 &629834953
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - component: {fileID: 566522319}
   - component: {fileID: 566522322}
   - component: {fileID: 566522321}
@@ -970,17 +977,23 @@ GameObject:
   m_Layer: 0
   m_Name: Exit
 =======
+=======
+>>>>>>> Stashed changes
   - component: {fileID: 629834956}
   - component: {fileID: 629834955}
   - component: {fileID: 629834957}
   m_Layer: 0
   m_Name: CinemachineCamera
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!4 &566522319
 Transform:
@@ -1001,11 +1014,15 @@ Transform:
 =======
 --- !u!114 &629834955
 >>>>>>> Stashed changes
+=======
+--- !u!114 &629834955
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   m_GameObject: {fileID: 566522318}
   m_Enabled: 1
@@ -1020,6 +1037,8 @@ MonoBehaviour:
 --- !u!483693784 &566522321
 TilemapRenderer:
 =======
+=======
+>>>>>>> Stashed changes
   m_GameObject: {fileID: 629834953}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1059,11 +1078,15 @@ TilemapRenderer:
   BlendHint: 0
 --- !u!4 &629834956
 Transform:
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   m_GameObject: {fileID: 566522318}
   m_Enabled: 1
@@ -1114,6 +1137,8 @@ Transform:
 --- !u!1839735485 &566522322
 Tilemap:
 =======
+=======
+>>>>>>> Stashed changes
   m_GameObject: {fileID: 629834953}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1125,11 +1150,15 @@ Tilemap:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &629834957
 MonoBehaviour:
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   m_GameObject: {fileID: 566522318}
   m_Enabled: 1
@@ -1278,6 +1307,8 @@ MonoBehaviour:
     e32: 0
     e33: 1
 =======
+=======
+>>>>>>> Stashed changes
   m_GameObject: {fileID: 629834953}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1291,6 +1322,9 @@ MonoBehaviour:
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
   FollowOffset: {x: 0, y: 0, z: -10}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &735315051
 GameObject:
@@ -1395,6 +1429,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -1431,6 +1466,8 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
 =======
+=======
+>>>>>>> Stashed changes
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -1454,6 +1491,9 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &1016211526
 GameObject:
