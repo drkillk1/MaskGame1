@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [CreateAssetMenu(menuName = "Masks/Mask Data")]
 public class MaskData : ScriptableObject
@@ -17,4 +18,6 @@ public class MaskData : ScriptableObject
     [Header("Jump Modifiers")]
     public bool enableLongJump;
     public float longJumpMultiplier = 1.5f;
+
+    public float longJumpHoldTime = 0.2f;
 }

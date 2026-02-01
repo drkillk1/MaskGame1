@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c017e7c7f88364594ec841b8bd8b3f, type: 3}
+  m_Name: lowGravity
+  m_EditorClassIdentifier: 
+  maskType: 0
+  allowJump: 0
+  allowSprint: 1
+  allowWallJump: 1
+  gravityMultiplier: 0.4
+  moveSpeedMultiplier: 1
+  enableLongJump: 0
+  longJumpMultiplier: 1.5
+  longJumpHoldTime: 0.2
