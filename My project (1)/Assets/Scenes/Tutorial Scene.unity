@@ -315,7 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerType: 4
   triggerName: 
-  targetSceneName: Level 1
+  targetSceneName: Level 3
   oneTimeTrigger: 1
 --- !u!483693784 &233380088
 TilemapRenderer:
