@@ -41,7 +41,8 @@ public class GameManager : MonoBehaviour
                 "Tutorial Scene",
                 "Level 1", 
                 "Level 2", 
-                "Level 3", 
+                "Level 3",
+                "End", 
                 // Add more levels as needed
             };
             
